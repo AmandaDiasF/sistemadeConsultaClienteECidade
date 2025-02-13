@@ -1,37 +1,33 @@
-**Projeto de Loja Simples de Venda de Produtos Eletrônicos em C#**
+Projeto de Sistema de Gerenciamento de Clientes e Cidades em C#
+O projeto desenvolvido é uma aplicação em C# para o gerenciamento de clientes e cidades, com o objetivo de organizar e facilitar as operações de cadastro e atualização dessas informações. Atualmente, o sistema permite o gerenciamento de dados relacionados a clientes e cidades, e está projetado para evoluir futuramente, integrando funcionalidades de controle de estoque e vendas, a fim de proporcionar uma solução mais completa para a gestão de uma loja ou empresa.
+Arquitetura do Sistema
+A arquitetura do sistema segue uma abordagem de camadas, dividindo a aplicação em três componentes principais: a interface do usuário (UI), a lógica de negócios e a camada de acesso a dados. Essa estrutura facilita a manutenção e a escalabilidade do sistema.
 
-**Introdução**
+Interface do Usuário (UI): A interface foi desenvolvida utilizando Windows Forms, proporcionando uma navegação simples e eficiente para os usuários. A interface permite a interação fácil com as funcionalidades de gerenciamento de clientes e cidades, com campos de entrada e botões bem definidos para cada ação.
+Lógica de Negócios: A lógica de negócios é implementada em classes C# que gerenciam as operações de cadastro, alteração e exclusão de clientes e cidades. A camada de negócios também é responsável por garantir que as regras de validação sejam seguidas e que as interações com a base de dados sejam feitas de maneira adequada.
+Camada de Acesso a Dados: O acesso a dados é realizado através de uma classe de conexão com o banco de dados, utilizando SQL para realizar as operações de CRUD (Create, Read, Update, Delete) nas informações de clientes e cidades.
 
-O projeto desenvolvido é uma aplicação em C# para uma loja de produtos eletrônicos, que visa oferecer uma experiência de compra tanto no ambiente físico, através de um sistema de caixa, quanto no ambiente online, permitindo que os clientes realizem suas compras diretamente pelo site da loja. O sistema foi projetado para ser intuitivo, eficiente e seguro, atendendo às necessidades de um mercado em constante evolução.
+Funcionalidades do Sistema
 
-**Arquitetura do Sistema**
+O sistema de gerenciamento de clientes e cidades oferece as seguintes funcionalidades:
 
-A arquitetura do sistema é baseada em uma abordagem de camadas, dividindo a aplicação em três principais componentes: a interface do usuário (UI), a lógica de negócios e a camada de acesso a dados. Essa estrutura permite uma manutenção mais fácil e uma escalabilidade futura.
+Cadastro de Clientes: Permite que os administradores ou atendentes cadastrem novos clientes, incluindo dados como nome, endereço e informações de contato.
 
-1. **Interface do Usuário (UI)**: A interface foi desenvolvida utilizando Windows Forms para a aplicação de caixa e ASP.NET para a plataforma online. Ambas as interfaces são responsivas e amigáveis, proporcionando uma navegação fluida e intuitiva para os usuários.
+Cadastro de Cidades: O sistema também permite o cadastro de cidades, associando um código único para cada cidade e vinculando-as a um estado.
 
-2. **Lógica de Negócios**: A lógica de negócios é implementada em classes C# que gerenciam as operações de venda, controle de estoque, e processamento de pagamentos. Essa camada é responsável por garantir que todas as regras de negócio sejam seguidas, como validações de estoque e cálculos de preços.
+Alteração e Exclusão de Dados: O sistema permite que as informações de clientes e cidades sejam atualizadas ou excluídas conforme necessário. Os usuários podem modificar os dados de cadastro ou excluir entradas existentes de forma simples.
 
-3. **Camada de Acesso a Dados**: Para o armazenamento das informações, foi utilizado o Entity Framework, que facilita a interação com um banco de dados SQL Server. Essa camada é responsável por realizar operações de CRUD (Create, Read, Update, Delete) nos dados da loja, como produtos, clientes e transações de vendas.
+Visualização de Dados: O sistema possibilita a visualização das informações cadastradas, permitindo que o usuário consulte facilmente as cidades ou os dados dos clientes registrados.
 
-**Funcionalidades do Sistema**
+Segurança e Autenticação
 
-O sistema possui diversas funcionalidades que atendem tanto o caixa quanto a experiência online do cliente:
+Para garantir a segurança e a integridade dos dados, o sistema implementa autenticação de usuários, permitindo que apenas funcionários autorizados possam acessar as funcionalidades de gerenciamento. Isso ajuda a evitar alterações não autorizadas nas informações sensíveis.
 
-- **Cadastro de Produtos**: Permite que os administradores da loja cadastrem novos produtos, incluindo informações como nome, descrição, preço e quantidade em estoque.
+Objetivo Futuro
 
-- **Venda no Caixa**: O sistema de caixa permite que os atendentes realizem vendas de forma rápida, escaneando códigos de barras dos produtos e processando pagamentos em dinheiro, cartão de crédito ou débito.
+O sistema está planejado para evoluir e se expandir, com a adição de funcionalidades para o gerenciamento de estoque e vendas. A integração dessas funcionalidades permitirá que o sistema atenda a novas necessidades da loja, facilitando a gestão de inventário e o processo de vendas de produtos.
 
-- **Venda Online**: Os clientes podem navegar pelo catálogo de produtos, adicionar itens ao carrinho e finalizar a compra de forma segura. O sistema oferece opções de pagamento online, como cartões de crédito e plataformas de pagamento digital.
+O projeto de sistema de gerenciamento de clientes e cidades em C# oferece uma solução prática e eficiente para o cadastro e manutenção de informações de clientes e cidades. Com uma arquitetura bem estruturada e funcionalidades de fácil uso, o sistema serve como base para a futura expansão, integrando também o gerenciamento de estoque e vendas, o que proporcionará uma plataforma mais robusta para o controle de operações comerciais.
 
-- **Controle de Estoque**: O sistema atualiza automaticamente o estoque após cada venda, garantindo que a disponibilidade dos produtos esteja sempre atualizada.
-
-- **Relatórios de Vendas**: Os administradores podem gerar relatórios detalhados sobre as vendas, permitindo uma análise de desempenho e tomada de decisões estratégicas.
-
-**Segurança e Autenticação**
-
-Para garantir a segurança das informações, o sistema implementa autenticação de usuários, permitindo que apenas funcionários autorizados acessem o sistema de caixa e as funcionalidades administrativas. Além disso, as transações online são protegidas por criptografia, assegurando a proteção dos dados dos clientes.
-
-**Conclusão**
-
-O projeto da loja simples de venda de produtos eletrônicos em C# representa uma solução completa para o comércio moderno, integrando a experiência de compra física e online. Com uma arquitetura robusta e funcionalidades que atendem às necessidades dos usuários, o sistema está preparado para oferecer um serviço de qualidade, aumentando a satisfação do cliente e a eficiência operacional da loja. A implementação deste projeto não só facilita as vendas, mas também proporciona uma base sólida para futuras expansões e melhorias.
+Para vizualições mais explicativas de sua funcionalidade visite nossa Wiki : https://github.com/AmandaDiasF/sistemadeConsultaClienteECidade/wiki
+Projeto desenvolvido  por Jhoann e Amanda Dias
